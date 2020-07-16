@@ -1,0 +1,29 @@
+/* core styles*/
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'El Messiri', sans-serif;
+}
+
+/*header styles*/
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.logo {
+    font-family: 'Satisfy', cursive;
+    display: flex;
+    align-self: center;
+    font-size: 60px;
+    width: auto;
+    border: 2px solid black;
+    background-color: lightpink;
+    padding: 5px;
+    margin: 10px;
+}
