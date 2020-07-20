@@ -19,14 +19,21 @@ h6 {
 }
 
 a {
-    font-size: 18px;
+    font-size: 20px;
+    text-decoration: none;
+    color: darkgray;
+    transition: 0.3s ease-in-out;
 }
+
+a:hover {
+    color: black;
+}
+
 
 /*header styles*/
 
 /* div,
-nav,
-header {
+nav, {
     border: 1px solid red;
 } */
 
@@ -34,7 +41,7 @@ header {
     display: flex;
     padding: 20px;
     justify-content: space-between;
-    background-color: lightyellow;
+    background-color: rgb(253, 228, 247);
 }
 
 .main-header-section {
@@ -46,22 +53,25 @@ header {
 
 .logo {
     font-family: 'Satisfy', cursive;
+    color: rgba(68, 67, 67);
     font-size: 25px;
-    border: 2px solid black;
     border-radius: 10px;
-    background-color: lightpink;
-    padding: 15px;
-    margin: 10px;
+    border: 3px dashed white;
+    padding: 10px;
+    margin: 10px 10px 5px 10px;
 }
 
 .nav-container {
     display: flex;
     flex-grow: 1;
-    justify-content: center;
+    justify-content: flex-end;
 }
 
+.nav-anchor-1 {}
+
 .nav-anchor-2 {
-    margin-left: 70px;
+    margin-left: 40px;
+
 }
 
 .search-basket-container {
