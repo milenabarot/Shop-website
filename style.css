@@ -89,3 +89,13 @@ header {
     flex-direction: column;
     justify-content: center;
 }
+
+/*Container styles */
+
+.first-container {
+    background-image: url(/macarons.jpg);
+    background-size: cover;
+    background-position: center;
+    min-height: 400px;
+    max-height: 350px;
+}
