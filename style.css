@@ -21,12 +21,12 @@ h6 {
 a {
     font-size: 20px;
     text-decoration: none;
-    color: darkgray;
+    color: black;
     transition: 0.3s ease-in-out;
 }
 
 a:hover {
-    color: black;
+    color: darkgray;
 }
 
 
@@ -63,25 +63,23 @@ header {
 
 .nav-container {
     display: flex;
-    flex-grow: 1;
-    justify-content: flex-end;
+    flex-basis: 35%;
+    justify-content: space-around;
 }
 
-.nav-anchor-1 {}
-
-.nav-anchor-2 {
-    margin-left: 40px;
-
+.nav-container a {
+    font-size: 25px;
 }
 
-.search-basket-container {
-    display: flex;
-    flex-grow: 1;
-    justify-content: center;
+.nav-container button img {
+    width: 30px;
+    height: auto;
 }
 
-.basket {
-    margin-left: 50px;
+button {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
 }
 
 .hamburger-menu {
@@ -95,7 +93,29 @@ header {
 .first-container {
     background-image: url(/macarons.jpg);
     background-size: cover;
+    background-repeat: no-repeat;
     background-position: center;
-    min-height: 400px;
-    max-height: 350px;
+    min-height: 550px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.bread-cakes-links {
+    display: flex;
+    justify-content: space-around;
+    flex-basis: 50%;
+}
+
+.bread-cakes-links a {
+    font-size: 40px;
+    color: white;
+    border: 3px dashed transparent;
+    padding: 10px;
+}
+
+.bread-cakes-links a:hover {
+    border-color: white;
+    border-radius: 10px;
+    background-color: rgb(253, 228, 247, 0.3);
 }
