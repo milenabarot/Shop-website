@@ -1,0 +1,36 @@
+@media only screen and (max-width: 805px) {
+
+
+    header,
+    .main-header-section {
+        flex-direction: column;
+    }
+
+    .hamburger-menu {
+        align-items: center;
+    }
+
+    .gallery-carousel {
+        flex-wrap: wrap;
+    }
+
+    .gallery-item {
+        flex-basis: 40%;
+    }
+}
+
+@media only screen and (max-width: 500px) {
+
+    .nav-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .gallery-item {
+        flex-basis: 100%;
+    }
+
+    .arrow-container {
+        display: none;
+    }
+}
