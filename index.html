@@ -23,16 +23,20 @@
             <nav class="nav-container">
                 <a class="nav-anchor-1" href="">Shop</a>
                 <a class="nav-anchor-2" href="">About us</a>
-                <button onclick="clickButton()" class="search-bar" href=""><img src="/search bar.png"
+                <button onclick="clickButton('Search')" class="search-bar" href=""><img src="/search bar.png"
                         alt="Search bar"></button>
-                <button onclick="clickButton()" class="basket" href=""><img src="/grocery basket.png"
+                <button onclick="clickButton('Basket')" class="basket" href=""><img src="/grocery basket.png"
                         alt="Basket"></button>
             </nav>
         </div>
-        <div class="hamburger-menu">
-            <a href="">Instagram</a>
-            <a href="">Social</a>
+        <div class="hamburger-wrapper">
+            <button class="hamburger-button" id="hamburger-button" onclick="onHamburgerButtonClick()">X</button>
+            <div class="hamburger-menu" id="hamburger-menu">
+                <a href="">Instagram</a>
+                <a href="">Social</a>
+            </div>
         </div>
+
     </header>
 
 
@@ -78,6 +82,27 @@
 
     </section>
 
+    <section>
+        <div class="image-grid">
+            <div class="column">
+                <img src="/cupcakes.jpg" alt="Picture of cupcakes">
+                <img src="/cupcakes.jpg" alt="Picture of cupcakes">
+                <img src="/cupcakes.jpg" alt="Picture of cupcakes">
+            </div>
+            <div class="column">
+                <img src="/bread.jpg" alt="Pictire of bread">
+                <img src="/bread.jpg" alt="Pictire of bread">
+                <img src="/bread.jpg" alt="Pictire of bread">
+            </div>
+            <div class="column">
+                <img src="/scones.jpg" alt="Picture of scones">
+                <img src="/scones.jpg" alt="Picture of scones">
+                <img src="/scones.jpg" alt="Picture of scones">
+
+            </div>
+
+        </div>
+    </section>
     <footer>
         <a class='footer-styles' href="/">theBakery.co.uk</a>
     </footer>

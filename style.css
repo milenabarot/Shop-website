@@ -22,7 +22,7 @@ a {
     font-size: 20px;
     text-decoration: none;
     color: black;
-    transition: 0.3s ease-in-out;
+    transition: 0.3s ease-in-out, visibility 0s;
 }
 
 a:hover {
@@ -83,11 +83,38 @@ button {
     cursor: pointer;
 }
 
+.hamburger-wrapper {
+    position: relative;
+    display: flex;
+    flex-basis: 10%;
+    justify-content: center;
+    align-items: center;
+}
+
+.hamburger-button {
+    color: blue;
+}
+
+.hamburger-is-active {
+    color: red;
+}
+
 .hamburger-menu {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    position: absolute;
+    top: 123px;
+    right: -10px;
+    text-align: center;
+    background-color: rgb(253, 228, 247, 0.7);
+    padding: 20px;
 }
+
+.hamburger-menu a {
+    font-size: 25px;
+}
+
 
 /*Container styles */
 
@@ -194,6 +221,33 @@ button {
     width: 28px;
     height: 28px;
 }
+
+
+/*image grid */
+
+.image-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.column {
+    display: flex;
+    flex-basis: 30%;
+    max-width: 30%;
+    flex-direction: column;
+    align-items: center;
+}
+
+.column img {
+    max-width: 90%;
+    max-height: 100%;
+    padding: 5px;
+}
+
+
+
+
 
 
 /* footer */
