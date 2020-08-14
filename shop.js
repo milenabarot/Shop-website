@@ -18,11 +18,12 @@ const hamburgerMenu = function (event) {
 
 const onHamburgerButtonClick = function () {
     const hamburgerMenu = document.querySelector('#hamburger-menu');
-    if (hamburgerMenu.style.visibility === 'hidden') {
-        hamburgerMenu.style.visibility = 'visible';
+    if (hamburgerMenu.className === 'hamburger-menu') {
+        hamburgerMenu.className = 'hamburger-menu hamburger-menu-is-active';
     } else {
-        hamburgerMenu.style.visibility = 'hidden';
+        hamburgerMenu.className = 'hamburger-menu';
     }
+
     const hamburgerButton = document.querySelector('#hamburger-button');
     if (hamburgerButton.className === 'hamburger-button') {
         hamburgerButton.className = 'hamburger-button hamburger-is-active';
