@@ -278,17 +278,19 @@ button {
     flex-direction: column;
     align-items: center;
     border: 2px solid black;
+    margin: 10px;
 }
 
 .column-1 img {
     max-width: 80%;
     max-height: 100%;
-    padding: 5px;
+    padding-top: 10px;
+    padding-bottom: 10px;
 }
 
 .column-2 {
     display: flex;
-    flex-basis: 60%;
+    flex-basis: 50%;
     flex-direction: column;
     align-items: center;
     border: 2px solid black;
@@ -300,9 +302,16 @@ button {
 }
 
 .large-image {
-    max-width: 100%;
-    max-height: 100%;
-    padding: 5px;
+    background-image: url("/bread\ cut\ up.jpg");
+    flex-basis: 70%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 100%;
+    margin: 60px;
+    /* max-width: 100%; */
+    /* max-height: 100%; */
+    /* padding: 5px; */
 }
 
 
