@@ -18,19 +18,28 @@ const hamburgerMenu = function (event) {
 
 const onHamburgerButtonClick = function () {
     const hamburgerMenu = document.querySelector('#hamburger-menu');
-    if (hamburgerMenu.className === 'hamburger-menu') {
-        hamburgerMenu.className = 'hamburger-menu hamburger-menu-is-active';
-    } else {
-        hamburgerMenu.className = 'hamburger-menu';
-    }
+    console.log(hamburgerMenu.classList);
+    hamburgerMenu.classList.toggle("hamburger-menu-is-active");
+
+    // Above toggle code replaces below if statement 
+    // if (hamburgerMenu.className === 'hamburger-menu') {
+    //     hamburgerMenu.className = 'hamburger-menu hamburger-menu-is-active';
+    // } else {
+    //     hamburgerMenu.className = 'hamburger-menu';
+    // }
 
     const hamburgerButton = document.querySelector('#hamburger-button');
-    if (hamburgerButton.className === 'hamburger-button') {
-        hamburgerButton.className = 'hamburger-button hamburger-is-active';
-    } else {
-        hamburgerButton.className = 'hamburger-button';
-    }
-    console.log(hamburgerButton);
+    console.log(hamburgerButton.classList);
+    hamburgerButton.classList.toggle("hamburger-is-active");
+
+
+    // Above toggle code replaces below if statement 
+    // if (hamburgerButton.className === 'hamburger-button') {
+    //     hamburgerButton.className = 'hamburger-button hamburger-is-active';
+    // } else {
+    //     hamburgerButton.className = 'hamburger-button';
+    // }
+    // console.log(hamburgerButton);
 }
 
 const blob = () => {

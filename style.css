@@ -269,7 +269,9 @@ button {
 
 .column {
     justify-content: center;
+    box-shadow: -3px 5.5px 10px 2px gray;
 }
+
 
 .column-1 {
     display: flex;
@@ -335,7 +337,6 @@ button {
 /* footer */
 
 footer {
-    background-color: rgb(253, 228, 247, 0.3);
     padding: 20px;
     text-align: center;
 }
