@@ -42,6 +42,35 @@ const onHamburgerButtonClick = function () {
     // console.log(hamburgerButton);
 }
 
+// Gallery item button
+let activeGalleryItemIndex = 0;
+const changeGalleryImage = function (value) {
+    const galleryItems = document.querySelectorAll('.gallery-item');
+    if (value === 1) {
+        if (activeGalleryItemIndex === galleryItems.length - 1) {
+            activeGalleryItemIndex = 0;
+        } else {
+            activeGalleryItemIndex++;
+        }
+    }
+    if (value === -1) {
+        if (activeGalleryItemIndex === 0) {
+            activeGalleryItemIndex = galleryItems.length - 1;
+        } else {
+            activeGalleryItemIndex--;
+        }
+    }
+    for (let i = 0; i < galleryItems.length; i++) {
+        console.log(galleryItems[i], i, activeGalleryItemIndex);
+        if (i !== activeGalleryItemIndex) {
+            galleryItems[i].classList.add('gallery-item-is-hidden');
+        } else {
+            galleryItems[i].classList.remove('gallery-item-is-hidden');
+        }
+    }
+}
+
+
 const blob = () => {
     console.log('mel');
 }

@@ -1,0 +1,20 @@
+{
+  "name": "shop-website",
+  "version": "1.0.0",
+  "description": "",
+  "main": "shop.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/milenabarot/Shop-website.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/milenabarot/Shop-website/issues"
+  },
+  "homepage": "https://github.com/milenabarot/Shop-website#readme",
+  "dependencies": {}
+}

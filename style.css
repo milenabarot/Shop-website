@@ -207,6 +207,10 @@ button {
     flex-basis: 50%;
 }
 
+.gallery-item-is-hidden {
+    display: none;
+}
+
 .gallery-item a {
     text-align: center;
     font-size: 17px;

@@ -60,28 +60,26 @@
             <a href="">Scones</a>
             <a href="">Add to basket</a>
         </div>
-        <div class="gallery-item">
+        <div class="gallery-item gallery-item-is-hidden">
             <img src="/cupcakes.jpg" alt="">
             <a href="">Victoria Sponge</a>
             <a href="">Add to basket</a>
         </div>
-        <div class="gallery-item">
+        <div class="gallery-item gallery-item-is-hidden">
             <img src="/chocolate-brownie.jpg" alt="">
             <a href="">Chocolate Brownies</a>
             <a href="">Add to basket</a>
         </div>
-        <div class="gallery-item">
+        <div class="gallery-item gallery-item-is-hidden">
             <img src="/bread.jpg" alt="">
             <a href="">Sourdough</a>
             <a href="">Add to basket</a>
         </div>
         <nav class='arrow-container right-arrow'>
-            <button type="button" onclick="console.log('right arrow clicked')"><img src="/arrow.png"
-                    alt="Arrow right"></button>
+            <button type="button" onclick="changeGalleryImage(1)"><img src="/arrow.png" alt="Arrow right"></button>
         </nav>
         <nav class='arrow-container left-arrow'>
-            <button type="button" onclick="console.log('left arrow clicked')"><img src="/arrow left.png"
-                    alt="Arrow left"></button>
+            <button type="button" onclick="changeGalleryImage(-1)"><img src="/arrow left.png" alt="Arrow left"></button>
         </nav>
 
     </section>
