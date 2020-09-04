@@ -53,3 +53,15 @@ const onLogoClick = (findMyBlob, findMyotherBlob) => {
     findMyBlob();
     findMyotherBlob();
 }
+
+// modal button 
+const onFormSubmit = () => {
+    const modal = document.querySelector('#modal');
+    modal.classList.add('modal-enter');
+    setTimeout(() => {
+        modal.classList.add('modal-exit');
+    }, 1500)
+    setTimeout(() => {
+        modal.classList.remove('modal-enter', 'modal-exit');
+    }, 2200)
+}
