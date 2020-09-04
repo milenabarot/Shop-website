@@ -44,22 +44,25 @@ const onHamburgerButtonClick = function () {
 
 // Gallery item button
 let activeGalleryItemIndex = 0;
-const changeGalleryImage = function (value) {
+
+const changeGalleryImage = function (increaseOrDecrease) {
     const galleryItems = document.querySelectorAll('.gallery-item');
-    if (value === 1) {
+
+    if (increaseOrDecrease === 'increase') {
         if (activeGalleryItemIndex === galleryItems.length - 1) {
             activeGalleryItemIndex = 0;
         } else {
             activeGalleryItemIndex++;
         }
     }
-    if (value === -1) {
+    if (increaseOrDecrease === 'decrease') {
         if (activeGalleryItemIndex === 0) {
             activeGalleryItemIndex = galleryItems.length - 1;
         } else {
             activeGalleryItemIndex--;
         }
     }
+
     for (let i = 0; i < galleryItems.length; i++) {
         console.log(galleryItems[i], i, activeGalleryItemIndex);
         if (i !== activeGalleryItemIndex) {
