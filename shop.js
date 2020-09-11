@@ -42,17 +42,7 @@ const onHamburgerButtonClick = function () {
     // console.log(hamburgerButton);
 }
 
-const blob = () => {
-    console.log('mel');
-}
-const otherBlob = function () {
-    console.log('joe');
-}
-const onLogoClick = (findMyBlob, findMyotherBlob) => {
-    console.log('bear');
-    findMyBlob();
-    findMyotherBlob();
-}
+
 
 // modal button 
 const onFormSubmit = () => {
@@ -65,3 +55,18 @@ const onFormSubmit = () => {
         modal.classList.remove('modal-enter', 'modal-exit');
     }, 2200)
 }
+
+// Add to Basket button
+let basketCount = 0;
+const onAddToBasketClick = function () {
+    const basketButton = document.querySelector('#basket-button');
+    console.log(basketButton);
+    basketCount++
+    basketButton.innerHTML = basketCount;
+    basketButton.classList.add("basket-icon-is-active");
+    setTimeout(() => {
+        basketButton.classList.remove("basket-icon-is-active");
+    }, 5000)
+
+
+};

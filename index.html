@@ -17,7 +17,7 @@
 
     <header>
         <div class="main-header-section">
-            <div class="logo" onclick="onLogoClick(blob, otherBlob)">
+            <div class="logo">
                 <h1> The Bakery </h1>
             </div>
             <nav class="nav-container">
@@ -25,8 +25,11 @@
                 <a class="nav-anchor-2" href="">About us</a>
                 <button onclick="clickButton('Search')" class="search-bar" href=""><img src="/search bar.png"
                         alt="Search bar"></button>
-                <button onclick="clickButton('Basket')" class="basket" href=""><img src="/grocery basket.png"
-                        alt="Basket"></button>
+                <div class="basket-button-wrap">
+                    <button onclick="clickButton('Basket')" class="basket" href=""><img src="/grocery basket.png"
+                            alt="Basket"></button>
+                    <div class="basket-button-icon" id="basket-button"></div>
+                </div>
             </nav>
         </div>
         <div class="hamburger-wrapper">
@@ -47,7 +50,7 @@
 
 
     <section class="first-container">
-        <div class="bread-cakes-links" onclick="onHamburgerButtonClick()">
+        <div class="bread-cakes-links">
             <a href="">Shop Bread</a>
             <a href="">Shop Cakes</a>
         </div>
@@ -58,31 +61,28 @@
         <div class="gallery-item">
             <img src="/scones.jpg" alt="">
             <a href="">Scones</a>
-            <a href="">Add to basket</a>
+            <button onclick="onAddToBasketClick()" href="">Add to
+                basket</button>
         </div>
         <div class="gallery-item">
             <img src="/cupcakes.jpg" alt="">
             <a href="">Victoria Sponge</a>
-            <a href="">Add to basket</a>
+            <button onclick="onAddToBasketClick()" href="">Add to
+                basket</button>
         </div>
         <div class="gallery-item">
             <img src="/chocolate-brownie.jpg" alt="">
             <a href="">Chocolate Brownies</a>
-            <a href="">Add to basket</a>
+            <button onclick="onAddToBasketClick()" href="">Add to
+                basket</button>
         </div>
         <div class="gallery-item">
             <img src="/bread.jpg" alt="">
             <a href="">Sourdough</a>
-            <a href="">Add to basket</a>
+            <button onclick="onAddToBasketClick()" href="">Add to
+                basket</button>
         </div>
-        <nav class='arrow-container right-arrow'>
-            <button type="button" onclick="console.log('right arrow clicked')"><img src="/arrow.png"
-                    alt="Arrow right"></button>
-        </nav>
-        <nav class='arrow-container left-arrow'>
-            <button type="button" onclick="console.log('left arrow clicked')"><img src="/arrow left.png"
-                    alt="Arrow left"></button>
-        </nav>
+
 
     </section>
 
