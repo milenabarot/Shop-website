@@ -63,6 +63,27 @@ header {
     padding: 10px;
     margin: 10px 10px 5px 10px;
     text-shadow: 0.2px 0.8px;
+    position: relative;
+}
+
+.logo:hover {
+    animation-name: logoborderchange;
+    animation-duration: 2s;
+    animation-iteration-count: 2;
+}
+
+@keyframes logoborderchange {
+    0% {
+        left: 0px;
+    }
+
+    50% {
+        left: 30px;
+    }
+
+    100% {
+        left: 0px;
+    }
 }
 
 .nav-container {
