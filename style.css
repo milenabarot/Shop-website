@@ -67,12 +67,12 @@ header {
 }
 
 .logo:hover {
-    animation-name: logoborderchange;
+    animation-name: logoanimation;
     animation-duration: 2s;
     animation-iteration-count: 2;
 }
 
-@keyframes logoborderchange {
+@keyframes logoanimation {
     0% {
         left: 0px;
     }
