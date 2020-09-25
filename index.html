@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="responsive-style.css">
-    <script src="shop.js"></script>
+    <script defer src="shop.js"></script>
     <link href="https://fonts.googleapis.com/css2?family=Satisfy&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=El+Messiri:wght@600&display=swap" rel="stylesheet">
     <title>The Bakery</title>
@@ -105,14 +105,16 @@
     </section>
     <section class="input-form">
         <h2>Contact</h2>
-        <form class="form-wrap" action="">
+        <form novalidate class="form-wrap" action="" id="form">
             <label for="fullname"></label>
             <input class="formbox" type="text" id="fullname" name="fullname" placeholder="Your name...">
             <label for="email"></label>
-            <input class="formbox" type="text" id="email" name="Youremail" placeholder="Your email...">
+            <input class="formbox" type="email" id="email" name="Youremail" required placeholder="Your email...">
+            <p class="error" aria-live="polite"></p>
             <label for="chat"></label>
-            <input class="formbox" type="text" id="chat" name="letschat" placeholder="Let's chat...">
-            <button class="submit-button" type="button" value="Send" onclick="onFormSubmit()">Send</button>
+            <input class="formbox" type="text" id="chat" name="letschat" placeholder=" Let's chat...">
+            <button class="submit-button" disabled type="button" value="Send" onclick="onFormSubmit()">Send</button>
+
         </form>
         <div class="form-submission-modal" id="modal">
             <div class="modal-content">

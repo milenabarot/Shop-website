@@ -56,6 +56,81 @@ const onFormSubmit = () => {
     }, 2200)
 }
 
+// form validation
+
+
+const inputFullName = document.getElementById('fullname')
+const inputEmail = document.getElementById('email')
+const inputChat = document.getElementById('chat')
+const emailError = document.querySelector('.error');
+
+let isInputFullNameValid = inputFullName.value ? true : false;
+let isInputEmailValid = inputEmail.value ? true : false;
+let isInputChatValid = inputChat.value ? true : false;
+
+const isButtonDisabled = () => {
+    const submitButton = document.querySelector('.submit-button');
+    if (isInputFullNameValid && isInputEmailValid && isInputChatValid) {
+        submitButton.disabled = false;
+    } else {
+        submitButton.disabled = true;
+    }
+
+}
+
+inputFullName.addEventListener('input', (event) => {
+    if (event.target.value === '') {
+        isInputFullNameValid = false;
+    } else {
+        isInputFullNameValid = true;
+    }
+    isButtonDisabled()
+})
+
+inputEmail.addEventListener('input', (event) => {
+    if (event.target.value === '' || inputEmail.validity.typeMismatch) {
+        isInputEmailValid = false;
+    } else {
+        isInputEmailValid = true;
+    }
+    isButtonDisabled()
+
+    if (inputEmail.validity.valid) {
+        emailError.textContent = '';
+
+    } else {
+        if (inputEmail.validity.valueMissing) {
+            emailError.textContent = 'You need to enter an e-mail address.';
+        } else if (inputEmail.validity.typeMismatch) {
+            emailError.textContent = 'Entered value needs to be an e-mail address.';
+        }
+    }
+})
+
+inputChat.addEventListener('input', (event) => {
+    if (event.target.value === '') {
+        isInputChatValid = false;
+    } else {
+        isInputChatValid = true;
+    }
+    isButtonDisabled()
+
+})
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 // Add to Basket button
 let basketCount = 0;
 const onAddToBasketClick = function () {
