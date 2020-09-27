@@ -15,6 +15,29 @@ const hamburgerMenu = function (event) {
 
 }
 */
+//header scroll functionality
+
+const firstContainer = document.querySelector('#first-container');
+const firstContainerBottomPosition = firstContainer.getBoundingClientRect().bottom;
+
+document.addEventListener("scroll", () => {
+    const header = document.querySelector('#header');
+    const logo = document.querySelector('#logo');
+
+    console.log(firstContainerBottomPosition)
+    if (window.scrollY > firstContainerBottomPosition - header.offsetHeight) {
+        header.classList.add('header-on-scroll');
+        logo.classList.add('logo-on-scroll');
+    } else {
+        header.classList.remove('header-on-scroll');
+        logo.classList.remove('logo-on-scroll');
+        console.log(logo)
+    }
+
+})
+
+
+
 
 const onHamburgerButtonClick = function () {
     const hamburgerMenu = document.querySelector('#hamburger-menu');

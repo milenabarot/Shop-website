@@ -41,10 +41,15 @@ header {
     display: flex;
     padding: 10px;
     justify-content: space-between;
-    background-color: rgb(253, 228, 247, 0.9);
+    background-color: rgb(253, 228, 247, 0.5);
     position: fixed;
     width: 100%;
     z-index: 300;
+    transition: 0.7s ease-in-out;
+}
+
+.header-on-scroll {
+    background-color: rgb(253, 228, 247, 1);
 }
 
 .main-header-section {
@@ -64,6 +69,11 @@ header {
     margin: 10px 10px 5px 10px;
     text-shadow: 0.2px 0.8px;
     position: relative;
+    transition: 0.7s ease-in-out;
+}
+
+.logo-on-scroll {
+    font-size: 17px;
 }
 
 .logo:hover {
@@ -203,7 +213,7 @@ button {
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
-    min-height: 550px;
+    min-height: 690px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -213,6 +223,7 @@ button {
     display: flex;
     justify-content: space-around;
     flex-basis: 50%;
+    margin-top: 130px;
 }
 
 .bread-cakes-links a {
