@@ -42,7 +42,6 @@ document.addEventListener("scroll", () => {
 
 const onHamburgerButtonClick = function () {
     const hamburgerMenu = document.querySelector('#hamburger-menu');
-    console.log(hamburgerMenu.classList);
     hamburgerMenu.classList.toggle("hamburger-menu-is-active");
 
     // Above toggle code replaces below if statement 
@@ -53,7 +52,6 @@ const onHamburgerButtonClick = function () {
     // }
 
     const hamburgerButton = document.querySelector('#hamburger-button');
-    console.log(hamburgerButton.classList);
     hamburgerButton.classList.toggle("hamburger-is-active");
 
 
@@ -70,6 +68,8 @@ const onHamburgerButtonClick = function () {
 
 // modal button 
 const onFormSubmit = () => {
+    document.querySelector("#form").reset();
+    document.querySelector('.submit-button').disabled = true;
     const modal = document.querySelector('#modal');
     modal.classList.add('modal-enter');
     setTimeout(() => {
@@ -78,6 +78,7 @@ const onFormSubmit = () => {
     setTimeout(() => {
         modal.classList.remove('modal-enter', 'modal-exit');
     }, 2200)
+
 }
 
 // form validation
@@ -108,7 +109,7 @@ inputFullName.addEventListener('input', (event) => {
     } else {
         isInputFullNameValid = true;
     }
-    isButtonDisabled()
+    isButtonDisabled();
 })
 
 inputEmail.addEventListener('input', (event) => {
@@ -117,7 +118,7 @@ inputEmail.addEventListener('input', (event) => {
     } else {
         isInputEmailValid = true;
     }
-    isButtonDisabled()
+    isButtonDisabled();
 
     if (inputEmail.validity.valid) {
         emailError.textContent = '';
@@ -137,7 +138,7 @@ inputChat.addEventListener('input', (event) => {
     } else {
         isInputChatValid = true;
     }
-    isButtonDisabled()
+    isButtonDisabled();
 
 })
 
