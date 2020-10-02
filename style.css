@@ -1,5 +1,6 @@
 /* core styles*/
 
+
 * {
     box-sizing: border-box;
 }
@@ -136,11 +137,11 @@ button {
     transition: 0.6s ease-in-out;
 }
 
+
 .nav-underline:hover::after {
     width: 103%;
     background-color: rgb(233, 243, 247);
 }
-
 
 
 /* basket button styles */
@@ -210,9 +211,9 @@ button {
     top: 0px;
     right: -10px;
     text-align: center;
-    background-color: rgb(253, 228, 247, 0.7);
+    background-color: rgb(253, 228, 247, 0.5);
     padding: 20px;
-    transition: 0.8s ease-in-out;
+    transition: 0.7s ease-in-out;
     visibility: hidden;
     opacity: 0;
     border-radius: 0 0 0 9px;
@@ -223,13 +224,19 @@ button {
     top: 123px;
     visibility: visible;
     opacity: 1;
-
+    background-color: rgb(253, 228, 247, 0.5);
 }
 
 .hamburger-menu a {
     font-size: 25px;
 }
 
+/* hamburger menu style on scroll */
+
+.hamburger-menu-is-active-on-scroll {
+    top: 95px;
+    background-color: rgb(253, 228, 247, 1);
+}
 
 /*Container styles */
 

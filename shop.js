@@ -23,14 +23,16 @@ const firstContainerBottomPosition = firstContainer.getBoundingClientRect().bott
 document.addEventListener("scroll", () => {
     const header = document.querySelector('#header');
     const logo = document.querySelector('#logo');
+    const hamburgerMenuScroll = document.querySelector('#hamburger-menu');
 
     if (window.scrollY > firstContainerBottomPosition - header.offsetHeight) {
         header.classList.add('header-on-scroll');
         logo.classList.add('logo-on-scroll');
+        hamburgerMenuScroll.classList.add('hamburger-menu-is-active-on-scroll');
     } else {
         header.classList.remove('header-on-scroll');
         logo.classList.remove('logo-on-scroll');
-
+        hamburgerMenuScroll.classList.remove('hamburger-menu-is-active-on-scroll');
     }
 
 })
@@ -138,16 +140,6 @@ inputChat.addEventListener('input', (event) => {
     isButtonDisabled()
 
 })
-
-
-
-
-
-
-
-
-
-
 
 
 
