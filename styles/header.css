@@ -1,0 +1,206 @@
+/*header styles*/
+
+/* div,
+nav, {
+    border: 1px solid red;
+} */
+
+header {
+    display: flex;
+    padding: 10px;
+    justify-content: space-between;
+    background-color: rgb(253, 228, 247, 0.5);
+    position: fixed;
+    width: 100%;
+    z-index: 300;
+    transition: 0.7s ease-in-out;
+}
+
+.header-on-scroll {
+    background-color: rgb(253, 228, 247, 1);
+}
+
+.main-header-section {
+    display: flex;
+    flex-basis: 90%;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
+    font-family: 'Satisfy', cursive;
+    color: rgba(68, 67, 67);
+    font-size: 25px;
+    border-radius: 10px;
+    border: 3px dashed white;
+    padding: 10px;
+    margin: 10px 10px 5px 10px;
+    text-shadow: 0.2px 0.8px;
+    position: relative;
+    transition: 0.7s ease-in-out;
+}
+
+.logo-on-scroll {
+    font-size: 17px;
+}
+
+.logo:hover {
+    animation-name: logoanimation;
+    animation-duration: 2s;
+    animation-iteration-count: 2;
+}
+
+@keyframes logoanimation {
+    0% {
+        left: 0px;
+    }
+
+    50% {
+        left: 30px;
+    }
+
+    100% {
+        left: 0px;
+    }
+}
+
+/* Nav styles */
+
+.nav-container {
+    display: flex;
+    flex-basis: 35%;
+    justify-content: space-around;
+    position: relative;
+}
+
+.nav-container a {
+    font-size: 25px;
+}
+
+.nav-container button img {
+    width: 30px;
+    height: auto;
+}
+
+button {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+.nav-underline {
+    position: relative;
+    text-decoration: none;
+}
+
+.nav-underline::after {
+    position: absolute;
+    content: '';
+    height: 2px;
+    bottom: -1px;
+    width: 0;
+    left: 0%;
+    background: black;
+    transition: 0.6s ease-in-out;
+}
+
+
+.nav-underline:hover::after {
+    width: 103%;
+    background-color: rgb(233, 243, 247);
+}
+
+
+/* basket button styles */
+
+.basket-button-wrap {
+    position: relative;
+}
+
+.basket-button-icon {
+    position: absolute;
+    transition: all 0.6s;
+    top: -24px;
+    right: 0;
+    font-size: 25px;
+    opacity: 0;
+}
+
+
+.basket-icon-is-active {
+    opacity: 1;
+}
+
+
+/*hamburger wrapper and menu */
+
+.hamburger-wrapper {
+    position: relative;
+    display: flex;
+    flex-basis: 10%;
+    justify-content: center;
+    align-items: center;
+}
+
+/*this class is when there is no menu down */
+
+.bar-1,
+.bar-2,
+.bar-3 {
+    width: 37px;
+    height: 4px;
+    background-color: black;
+    margin: 5px;
+    transition: 0.8s ease-in-out;
+}
+
+
+/*this class is when there is a menu */
+
+.hamburger-is-active>.bar-1 {
+    transform: rotate(-45deg) translate(-6px, 6px);
+}
+
+.hamburger-is-active>.bar-2 {
+    opacity: 0;
+}
+
+.hamburger-is-active>.bar-3 {
+    transform: rotate(45deg) translate(-6px, -8px);
+}
+
+
+.hamburger-menu {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: absolute;
+    top: 0px;
+    right: -10px;
+    text-align: center;
+    background-color: rgb(253, 228, 247, 0.5);
+    padding: 20px;
+    transition: 0.7s ease-in-out;
+    visibility: hidden;
+    opacity: 0;
+    border-radius: 0 0 0 9px;
+}
+
+.hamburger-menu-is-active {
+    position: absolute;
+    top: 123px;
+    visibility: visible;
+    opacity: 1;
+    background-color: rgb(253, 228, 247, 0.5);
+}
+
+.hamburger-menu a {
+    font-size: 25px;
+}
+
+/* hamburger menu style on scroll */
+
+.hamburger-menu-is-active-on-scroll {
+    top: 95px;
+    background-color: rgb(253, 228, 247, 1);
+}

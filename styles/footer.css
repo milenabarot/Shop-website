@@ -1,0 +1,25 @@
+/* footer */
+
+footer {
+    padding-top: 30px;
+    padding-bottom: 10px;
+    text-align: center;
+    background-color: rgb(253, 228, 247, 0.9);
+}
+
+.footer-styles {
+    font-style: italic;
+    font-family: 'Satisfy', cursive;
+    text-shadow: 0.2px 0.8px;
+    font-size: 28px;
+    background-color: white;
+    border: 2px solid transparent;
+    border-radius: 15px;
+    padding: 10px;
+
+}
+
+footer p {
+    font-size: 15px;
+    margin-top: 30px;
+}

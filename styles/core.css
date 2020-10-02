@@ -1,0 +1,35 @@
+/* core styles*/
+
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'El Messiri', sans-serif;
+    margin: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin: 0;
+}
+
+a {
+    font-size: 20px;
+    text-decoration: none;
+    color: black;
+    transition: 0.3s ease-in-out, visibility 0s;
+}
+
+a:hover {
+    color: darkgray;
+}
+
+button {
+    outline: none;
+}
