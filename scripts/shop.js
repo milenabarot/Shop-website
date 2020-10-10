@@ -65,6 +65,14 @@ const onHamburgerButtonClick = function () {
 }
 
 
+// search bar dropdown menu
+
+const onSearchButtonClick = function () {
+    const searchBar = document.querySelector('#dropdown-search');
+    searchBar.classList.toggle("dropdown-search-active");
+    console.log('this has been clicked')
+}
+
 
 // modal button 
 const onFormSubmit = () => {

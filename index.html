@@ -23,8 +23,21 @@
             <nav class="nav-container">
                 <a class="nav-anchor-1 nav-underline" href="">Shop</a>
                 <a class="nav-anchor-1 nav-underline" href="">About us</a>
-                <button onclick="clickButton('Search')" class="search-bar" href=""><img src="./assets/search bar.png"
+                <div class="search-button">
+                    <button onclick="onSearchButtonClick()" class="search-bar" href=""><img src="./assets/search bar.png"
                         alt="Search bar"></button>
+                    <div class="dropdown-search" id="dropdown-search">
+                        <input type="text" class="search-box" id="search-box" onkeyup="" placeholder="Search...">
+                        <a href="">Bread</a>
+                        <a href="">Made to order</a>
+                        <a href="">Occasions</a>
+                        <a href="">Pastries</a>
+                        <a href="">Contact form</a>
+                        <a href="">Sourdough</a>
+                        <a href="">History</a>
+                    </div>
+                </div>
+                
                 <div class="basket-button-wrap">
                     <button onclick="clickButton('Basket')" class="basket" href=""><img
                             src="./assets/grocery basket.png" alt="Basket"></button>
