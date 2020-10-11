@@ -134,14 +134,17 @@ button {
 
 /* search bar styles */
 
-.search-button {
+.search {
     position: relative;
 }
 
-/* 
-.search-button img:hover {
+.search-button {
+    transition: 0.5s ease-in-out;
+}
+
+.search-button:hover {
     background-color: white;
-} */
+}
 
 
 /* hidden by default */
@@ -155,6 +158,7 @@ button {
     top: 82px;
     left: -50%;
     padding: 5px;
+    min-width: max-content;
 }
 
 /*class that JS will add when search button is clicked */
@@ -171,16 +175,25 @@ button {
     border-radius: 5px;
     background-color: rgb(253, 228, 247, 0.3);
     color: white;
+    width: 50%;
+    transition: 0.7s ease-in-out;
+    outline: none;
 }
 
-.search-box:hover {
-    border-bottom: 1px solid black;
+.dropdown-search input[type="text"]:hover {
+    width: 100%;
 
 }
 
-.dropdown-search a {
+.search-list {
+    list-style: none;
+    padding-left: 4px;
+    margin: 0;
+}
+
+.search-result {
     font-size: 18px;
-    padding-left: 10px;
+
 }
 
 

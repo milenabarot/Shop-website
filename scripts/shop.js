@@ -70,8 +70,41 @@ const onHamburgerButtonClick = function () {
 const onSearchButtonClick = function () {
     const searchBar = document.querySelector('#dropdown-search');
     searchBar.classList.toggle("dropdown-search-active");
-    console.log('this has been clicked')
 }
+
+
+const searchResults = ['Bread', 'Pastries', 'Made to Order', 'Occasions', 'Sourdough', 'Contact Form', 'History'];
+
+
+const getSearchResults = function (event = { target: {value: ''}}) {
+    const searchQuery = event.target.value;
+    const searchList = document.querySelector('#search-list');
+    let filteredResults = [];
+
+    if (searchQuery === '') {
+        filteredResults = searchResults;
+    } else {
+        filteredResults = searchResults.filter(searchResult => {
+            return searchResult.toLowerCase().includes(searchQuery.toLowerCase())
+        })
+    }
+        
+
+    const htmlstring = filteredResults.map(result => {
+        return `
+        <li class="search-result">${result}</li>
+        `
+    })
+        .join('');
+    
+    searchList.innerHTML = htmlstring;
+}
+
+getSearchResults();
+
+
+
+
 
 
 // modal button 
