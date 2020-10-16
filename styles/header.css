@@ -131,6 +131,12 @@ button {
     opacity: 1;
 }
 
+.basket:hover {
+    background-color: rgba(255, 255, 255, 0.4);
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+}
 
 /* search bar styles */
 
@@ -140,10 +146,13 @@ button {
 
 .search-button {
     transition: 0.5s ease-in-out;
+    display: flex;
+    justify-content: center;
 }
 
 .search-button:hover {
-    background-color: white;
+    background-color: rgba(255, 255, 255, 0.4);
+    border-radius: 5px;
 }
 
 
@@ -173,7 +182,7 @@ button {
     font-family: 'El Messiri', sans-serif;
     padding-left: 10px;
     border-radius: 5px;
-    background-color: rgb(253, 228, 247, 0.3);
+    background-color: rgb(253, 228, 247, 0.8);
     color: white;
     width: 50%;
     transition: 0.7s ease-in-out;
@@ -189,6 +198,9 @@ button {
     list-style: none;
     padding-left: 4px;
     margin: 0;
+    background-color: rgb(253, 228, 247, 0.3);
+    width: 50%;
+    border-radius: 5px;
 }
 
 .search-result {

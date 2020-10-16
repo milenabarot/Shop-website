@@ -197,7 +197,7 @@ const onAddToBasketClick = function () {
     basketButton.classList.add("basket-icon-is-active");
     setTimeout(() => {
         basketButton.classList.remove("basket-icon-is-active");
-    }, 5000)
+    }, 5000);
 
 
 };
