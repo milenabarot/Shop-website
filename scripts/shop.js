@@ -94,9 +94,15 @@ const getSearchResults = function (event) {
     filteredResults.forEach(result => {
         let listItem = document.createElement('li');
         listItem.innerHTML = result;
+        listItem.classList = 'search-result';
         searchList.appendChild(listItem);
+
     })
-        
+    if (filteredResults.length === 0) {
+        const error = document.createElement('p');
+        error.innerHTML = 'No results!';
+        searchList.appendChild(error);
+       } 
 
 }
 
