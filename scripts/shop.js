@@ -75,32 +75,63 @@ const onSearchButtonClick = function () {
 
 const searchResults = ['Bread', 'Pastries', 'Made to Order', 'Occasions', 'Sourdough', 'Contact Form', 'History'];
 
+//function that targets inside of input field value 
 
-const getSearchResults = function (event = { target: {value: ''}}) {
-    const searchQuery = event.target.value;
+const getSearchResults = function (event) {
+    const searchValue = event.target.value;
     const searchList = document.querySelector('#search-list');
+    searchList.innerHTML = '';
     let filteredResults = [];
 
-    if (searchQuery === '') {
-        filteredResults = searchResults;
-    } else {
-        filteredResults = searchResults.filter(searchResult => {
-            return searchResult.toLowerCase().includes(searchQuery.toLowerCase())
-        })
-    }
+    filteredResults = searchResults.filter(result => {
+        if (result.toLowerCase().includes(searchValue.toLowerCase())) {
+            return true; 
+        } else {
+            return false;
+        }
+    })
+
+    filteredResults.forEach(result => {
+        let listItem = document.createElement('li');
+        listItem.innerHTML = result;
+        searchList.appendChild(listItem);
+    })
         
 
-    const htmlstring = filteredResults.map(result => {
-        return `
-        <li class="search-result">${result}</li>
-        `
-    })
-        .join('');
-    
-    searchList.innerHTML = htmlstring;
 }
 
-getSearchResults();
+
+
+//alternative function for displaying search results, with an inital default event value so whole list appears at first
+
+// const getSearchResults = function (event = { target: {value: ''}}) {
+//     const searchQuery = event.target.value;
+//     const searchList = document.querySelector('#search-list');
+//     let filteredResults = [];
+
+
+//     if (searchQuery === '') {
+//         filteredResults = searchResults;
+//     } else {
+//         filteredResults = searchResults.filter(searchResult => {
+//             return searchResult.toLowerCase().includes(searchQuery.toLowerCase())
+//         })
+    
+//     }
+        
+
+//     const htmlstring = filteredResults.map(result => {
+//         return `
+//         <li class="search-result">${result}</li>
+//         `
+//     })
+//         .join('');
+    
+//     searchList.innerHTML = htmlstring;
+
+// }
+
+// getSearchResults();
 
 
 
@@ -191,13 +222,15 @@ inputChat.addEventListener('input', (event) => {
 let basketCount = 0;
 const onAddToBasketClick = function () {
     const basketButton = document.querySelector('#basket-button');
+    const basket = document.querySelector('#basket');
     console.log(basketButton);
     basketCount++
     basketButton.innerHTML = basketCount;
     basketButton.classList.add("basket-icon-is-active");
+    basket.classList.add("basket-lightup");
     setTimeout(() => {
         basketButton.classList.remove("basket-icon-is-active");
+        basket.classList.remove("basket-lightup");
     }, 5000);
-
 
 };
