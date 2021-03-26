@@ -1,20 +1,3 @@
-const clickButton = function (buttonType) {
-  console.log(`The ${buttonType} button has been clicked`);
-};
-
-/*
-const hamburgerMenu = function (event) {
-    const blob = event.target;
-    console.log(blob);
-    if (blob.style.margin === '10px') {
-        blob.style.margin = '0px';
-    } else {
-        blob.style.margin = '10px';
-    }
-
-
-}
-*/
 //header scroll functionality
 
 const firstContainer = document.querySelector("#first-container");
@@ -43,23 +26,8 @@ const onHamburgerButtonClick = function () {
   const hamburgerMenu = document.querySelector("#hamburger-menu");
   hamburgerMenu.classList.toggle("hamburger-menu-is-active");
 
-  // Above toggle code replaces below if statement
-  // if (hamburgerMenu.className === 'hamburger-menu') {
-  //     hamburgerMenu.className = 'hamburger-menu hamburger-menu-is-active';
-  // } else {
-  //     hamburgerMenu.className = 'hamburger-menu';
-  // }
-
   const hamburgerButton = document.querySelector("#hamburger-button");
   hamburgerButton.classList.toggle("hamburger-is-active");
-
-  // Above toggle code replaces below if statement
-  // if (hamburgerButton.className === 'hamburger-button') {
-  //     hamburgerButton.className = 'hamburger-button hamburger-is-active';
-  // } else {
-  //     hamburgerButton.className = 'hamburger-button';
-  // }
-  // console.log(hamburgerButton);
 };
 
 // search bar dropdown menu
@@ -111,35 +79,6 @@ const getSearchResults = function (event) {
     searchList.appendChild(error);
   }
 };
-
-//alternative function for displaying search results, with an inital default event value so whole list appears at first
-
-// const getSearchResults = function (event = { target: {value: ''}}) {
-//     const searchQuery = event.target.value;
-//     const searchList = document.querySelector('#search-list');
-//     let filteredResults = [];
-
-//     if (searchQuery === '') {
-//         filteredResults = searchResults;
-//     } else {
-//         filteredResults = searchResults.filter(searchResult => {
-//             return searchResult.toLowerCase().includes(searchQuery.toLowerCase())
-//         })
-
-//     }
-
-//     const htmlstring = filteredResults.map(result => {
-//         return `
-//         <li class="search-result">${result}</li>
-//         `
-//     })
-//         .join('');
-
-//     searchList.innerHTML = htmlstring;
-
-// }
-
-// getSearchResults();
 
 // modal button
 const onFormSubmit = () => {
@@ -217,7 +156,6 @@ let basketCount = 0;
 const onAddToBasketClick = function () {
   const basketButton = document.querySelector("#basket-button");
   const basket = document.querySelector("#basket");
-  console.log(basketButton);
   basketCount++;
   basketButton.innerHTML = basketCount;
   basketButton.classList.add("basket-icon-is-active");
